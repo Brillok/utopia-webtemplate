@@ -1,5 +1,4 @@
-
-![screenshot](https://github.com/Sagleft/PHP-blank-MVC/raw/master/controller/public_html/img/screenshot.png)
+# Utopia Web Template
 
 ## Features
 
@@ -7,7 +6,7 @@
 * similarity of MVC structure;
 * .ENV via dotenv;
 * meta tags for previews in social networks;
-* something else;
+* connecting to the Utopia client through [UtopiaClient](https://github.com/Sagleft/utopialib-php).
 
 ## Requirements
 * PHP 7.1;
@@ -23,8 +22,4 @@ sh install.sh
 
 Next, make changes to .env
 
-Directory: ``` controller\public_html ```.
-
-## Copyright
-
-Copyright (c) 2020 Sagleft.
+Public html directory: ``` controller\public_html ```.
