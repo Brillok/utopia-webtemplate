@@ -13,15 +13,6 @@
 * PHP 7.1;
 * Apache 2.6;
 
-# Project logic
-
-1. Подключаются библиотеки через composer;
-2. создается экземпляр Handler;
-3. Handler создает экземпляры Environment, Logic и User;
-4. Environment загружает данные из .env;
-5. Handler рендерит страницу через Render;
-6. Render обрабатывает запрошенный шаблон и через Twig выдает страницу.
-
 ## Installation
 
 run
