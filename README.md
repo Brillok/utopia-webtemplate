@@ -6,7 +6,8 @@
 * similarity of MVC structure;
 * .ENV via dotenv;
 * meta tags for previews in social networks;
-* connecting to the Utopia client through [UtopiaClient](https://github.com/Sagleft/utopialib-php).
+* connecting to the Utopia client through [UtopiaClient](https://github.com/Sagleft/utopialib-php);
+* connected [UIkit 3.3.0](https://getuikit.com/docs/introduction)
 
 ## Requirements
 * PHP 7.1;
