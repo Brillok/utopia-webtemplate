@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'parts/head.tmpl' %}
+	<body>
+		{% include 'parts/navbar.tmpl' %}
+		<div class="uk-container">
+			<br/>
+			<h3>UtopiaAPI Usage Example</h3>
+			{% if page.client.is_connected == false %}
+				<p>Failed to connect to the Utopia client. Check settings in <code>.env</code></p>
+			{% endif %}
+			<table class="uk-table uk-table-striped uk-table-small">
+				<tbody>
+					<tr>
+						<td>Connected to Client</td>
+						<td>{% if page.client.is_connected %}true{% else %}false{% endif %}</td>
+					</tr>
+					<tr>
+						<td>Account balance</td>
+						<td>{{ page.test.balance }} CRP</td>
+					</tr>
+					<tr>
+						<td>Network peers connected</td>
+						<td>{{ page.test.network.peers }}</td>
+					</tr>
+					<tr>
+						<td>Known peers</td>
+						<td>{{ page.test.network.known_peers }}</td>
+					</tr>
+					<tr>
+						<td>Account name</td>
+						<td>{{ page.test.account.nick }}</td>
+					</tr>
+					<tr>
+						<td>Account pubkey</td>
+						<td>{{ page.test.account.pk }}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<h3>Instructions for creating your site in the Utopia Ecosystem</h3>
+			<p>
+				<ul>
+					<ol>1. Create a uNS record in the Utopia client that will play the domain name of your site.</ol>
+					<ol>2. Go to <b>Tools</b> -> <b>uNS Manager</b> -> <b>Packets Forwarding</b>.</ol>
+					<ol>3. Click on "Add". Select <b>uNS entry</b>, enter <b>port</b> (80 for HTTP, 443 for HTTPS by default) and the <b>IP</b> server on which the site will be hosted. 127.0.0.1 if you host a site on localhost.</ol>
+					<ol>4. Find the created entry in the packet forwarding records table and click "Enable" (if in the last paragraph you did not activate the corresponding option when creating the record).</ol>
+					<ol>5. Configure name resolution on your server. It could be an entry in the hosts file.</ol>
+				</ul>
+				<h1>Well done!</h1>
+				<p>To check your site on the Utopia Network, open the Idyll browser: <b>Tools</b> -> <b>Idyll Browser</b></p>
+			</p>
+		</div>
+		<hr class="uk-divider-icon"/>
+		
+		{% include 'parts/footer.tmpl' %}
+		{% include 'parts/scripts.tmpl' %}
+	</body>
+</html>
