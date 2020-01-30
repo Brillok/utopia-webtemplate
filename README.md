@@ -24,3 +24,5 @@ sh install.sh
 Next, make changes to .env
 
 Public html directory: ``` controller\public_html ```.
+
+![screenshot](https://github.com/Brillok/utopia-webtemplate/raw/master/docs/instructions.png)
